@@ -3,19 +3,18 @@ import ReactDOM from 'react-dom';
 import {
   Grid, 
   Row, 
-  Col,
-  Panel,
-  Jumbotron,
-  Button } from 'react-bootstrap';
+  Col
+} from 'react-bootstrap';
 import { 
   BrowserRouter as Router, 
   Route,
-  Link } from 'react-router-dom';
+} from 'react-router-dom';
 
-import './index.css';
 import TodoListComponent from './todolist.component';
 import TodoListUpdateForm from './todolist-updateform.component';
 import NavComponent from './navcomponent.component';
+import HomeComponent from './homecomponent.component';
+import AboutComponent from './aboutcomponent.component';
 
 
 class MainComponent extends React.Component {
@@ -66,34 +65,9 @@ class MainComponent extends React.Component {
   }
 }
 
-class AboutComponent extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1> More coming! </h1>
-      </div>
-    )
-  }
-}
 
-class HomeComponent extends React.Component {
-  render() {
-    return ( 
-      <Row>
-        <Jumbotron>
-          <h1>Making To-Do Simple</h1>
-          <p>Spend less time thinking about things to do, and more time actually doing things</p>
-          <p><Link to="/todo"><Button>Try it!</Button></Link></p>
-        </Jumbotron>
-        <Panel header="Introduction">
-          Made by the same brilliant mind that brought classics such as 'Hello World' and 'Fizzbuzz', Todo App hopes to revolutionize the way the
-          world works by leveraging the latest in front-end technologies to maximize value and advance your personal agenda - one task at a time.
-        </Panel>
-      </Row>
-      
-   )
-  }
-}
+
+
 
 ReactDOM.render(
   <Router>
