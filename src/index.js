@@ -53,21 +53,15 @@ class MainComponent extends React.Component {
     return (
       <Row>
         <br />
-        <Col md={2}></Col>
-        <Col md={8}>
+        <Col md={8} mdOffset={2} lg={8} lgOffset={2} sm={8} smOffset={2} xs={8} xsOffset={2}>
           <TodoListUpdateForm onSubmit={this.handleSubmit}></TodoListUpdateForm>
           <Row><hr></hr></Row>
           <TodoListComponent todos={this.state.todos} handleDelete={this.handleDelete}></TodoListComponent> 
         </Col>
-        <Col md={2}></Col>
       </Row>
     );
   }
 }
-
-
-
-
 
 ReactDOM.render(
   <Router>
