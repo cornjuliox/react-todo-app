@@ -20,9 +20,14 @@ export default class TodoListUpdateForm extends React.Component {
 
   handleSubmit(event) {
     console.log('submitted')
-    this.props.onSubmit(this.state.todo)
-    this.setState({todo: ''});
-    event.preventDefault();
+    if (this.state.todo === '') {
+      event.preventDefault();
+      return;
+    } else {
+      this.props.onSubmit(this.state.todo)
+      this.setState({todo: ''});
+      event.preventDefault();
+    }
   }
 
   render() {
